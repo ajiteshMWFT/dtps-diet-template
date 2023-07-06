@@ -79,19 +79,39 @@ function App() {
         <Notes />
 
         <img
-          src="./assets/12.jpg"
+          src="./assets/Cycle/01.jpg"
           className="w-full max-w-[540px] h-full mx-auto"
         />
         <img
-          src="./assets/13.jpg"
+          src="./assets/Cycle/02.jpg"
           className="w-full max-w-[540px] h-full mx-auto"
         />
         <img
-          src="./assets/14.jpg"
+          src="./assets/Cycle/02_1.jpg"
           className="w-full max-w-[540px] h-auto mx-auto"
         />
         <img
-          src="./assets/15.jpg"
+          src="./assets/Cycle/03.jpg"
+          className="w-full max-w-[540px] h-full mx-auto"
+        />
+        <img
+          src="./assets/Cycle/03_1.jpg"
+          className="w-full max-w-[540px] h-full mx-auto"
+        />
+        <img
+          src="./assets/Cycle/04.jpg"
+          className="w-full max-w-[540px] h-full mx-auto"
+        />
+        <img
+          src="./assets/Cycle/04_1.jpg"
+          className="w-full max-w-[540px] h-full mx-auto"
+        />
+        <img
+          src="./assets/Cycle/05.jpg"
+          className="w-full max-w-[540px] h-full mx-auto"
+        />
+        <img
+          src="./assets/Cycle/05_1.jpg"
           className="w-full max-w-[540px] h-full mx-auto"
         />
       </div>
