@@ -9,11 +9,12 @@ import Notes from "./components/notes";
 
 function App() {
   const [Days, setDays] = useState(7);
-  useState
+  const [Loading, setLoading] = useState(false)
 
   const contentRef = useRef(null);
 
   const convertToPDF = async () => {
+    setLoading(true)
     const pdf = new jsPDF( {unit: "pt",
     format: [540, 960]});
     const container = contentRef.current;
@@ -45,7 +46,8 @@ function App() {
       }
     }
   
-    pdf.save("converted.pdf");
+    await pdf.save("converted.pdf");
+    setLoading(false)
   };
 
   return (
@@ -97,8 +99,12 @@ function App() {
       <button
         className="px-8 py-4 bg-green-400 text-white flex justify-center mx-auto mt-10"
         onClick={() => convertToPDF()}
+        disabled={Loading}
       >
-        Download PDF
+        {
+          Loading?"Creating":" Download PDF"
+        }
+       
       </button>
     </div>
   );
