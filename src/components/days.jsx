@@ -2,7 +2,7 @@ import React from "react";
 
 const Day = ({ i }) => {
   return (
-    <div className='w-full max-w-[1080px] aspect-[9/16] bg-[url("/assets/dietbg.jpg")] mx-auto bg-cover '>
+    <div className='w-full max-w-[540px]  h-full aspect-[9/16] bg-[url("/assets/dietbg.jpg")] mx-auto bg-cover '>
       <div className="relative top-[10%]  flex flex-col gap-2 lg:gap-6 px-[10%]  mx-auto ">
         <h2 className="text-lg lg:text-5xl font-extrabold">Day {i + 1}</h2>
         <table className="mt-[5%] lg:mt-[15%] font-bold font-lg lg:font-3xl ">

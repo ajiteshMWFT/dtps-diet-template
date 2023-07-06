@@ -9,29 +9,42 @@ import Notes from "./components/notes";
 
 function App() {
   const [Days, setDays] = useState(7);
-  
+  useState
+
   const contentRef = useRef(null);
 
   const convertToPDF = async () => {
-    const pdf = new jsPDF("p", "pt", "a4");
+    const pdf = new jsPDF( {unit: "pt",
+    format: [540, 960]});
     const container = contentRef.current;
 
     for (let i = 0; i < container.children.length; i++) {
       const child = container.children[i];
-      const canvas = await html2canvas(child);
 
       if (i > 0) {
         pdf.addPage();
       }
-
+      const canvas = await html2canvas(child);
       const imgData = canvas.toDataURL("image/png");
-      const imgProps = pdf.getImageProperties(imgData);
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-
-      pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+      const imgWidth = pdf.internal.pageSize.getWidth();
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+  
+      let remainingHeight = imgHeight;
+      let currentY = 0;
+      const pageHeight = pdf.internal.pageSize.getHeight();
+  
+      while (remainingHeight > 0) {
+        const height = Math.min(pageHeight, remainingHeight);
+        pdf.addImage(imgData, "PNG", 0, currentY, imgWidth, height);
+        remainingHeight -= height;
+        currentY += height;
+  
+        if (remainingHeight > 0 && currentY < pageHeight) {
+          pdf.addPage();
+        }
+      }
     }
-
+  
     pdf.save("converted.pdf");
   };
 
@@ -50,34 +63,34 @@ function App() {
       <div ref={contentRef}>
         <img
           src="./assets/Intro.jpg"
-          className="w-full max-w-[1080px] h-full mx-auto"
+          className="w-full max-w-[540px] h-full mx-auto"
         />
         <ClientInfo />
         <img
           src="./assets/02.jpg"
-          className="w-full max-w-[1080px] h-full mx-auto"
+          className="w-full max-w-[540px] h-full mx-auto"
         />
 
-        {[...Array(7)]?.map((e, i) => (
+        {[...Array(Days)]?.map((e, i) => (
           <Day i={i} key={i} />
         ))}
         <Notes />
 
         <img
           src="./assets/12.jpg"
-          className="w-full max-w-[1080px] h-full mx-auto"
+          className="w-full max-w-[540px] h-full mx-auto"
         />
         <img
           src="./assets/13.jpg"
-          className="w-full max-w-[1080px] h-full mx-auto"
+          className="w-full max-w-[540px] h-full mx-auto"
         />
         <img
           src="./assets/14.jpg"
-          className="w-full max-w-[1080px] h-full mx-auto"
+          className="w-full max-w-[540px] h-auto mx-auto"
         />
         <img
           src="./assets/15.jpg"
-          className="w-full max-w-[1080px] h-full mx-auto"
+          className="w-full max-w-[540px] h-full mx-auto"
         />
       </div>
 

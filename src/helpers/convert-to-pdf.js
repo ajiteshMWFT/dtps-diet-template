@@ -5,7 +5,7 @@ import { createRoot } from "react-dom";
 export const convertElementToPDF = async(element) => {
     const pdf = new jsPDF({
         unit: 'px',
-        format: [1080, pdfHeight],
+        format: [540, pdfHeight],
       });
     const htmlElement = document.createElement('div');
     const children = React.Children.toArray(element.props.children);
