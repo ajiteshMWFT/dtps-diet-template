@@ -51,7 +51,7 @@ function App() {
   };
 
   return (
-    <div className="mx-auto bg-[url('https://iili.io/HiyEWJ9.jpg')] bg-fixed bg-no-repeat bg-cover">
+    <div className="mx-auto bg-[url('https://iili.io/Hiyht1f.jpg')] bg-fixed bg-no-repeat bg-cover">
       <div className="mx-auto mb-4 flex justify-center items-center font-bold bg-rose-300 p-2">
         <label htmlFor="day-num " className="text-white">Number of Days</label>
         <input
