@@ -64,6 +64,7 @@ function App() {
           className="ml-3 inline border-2  p-2 rounded-sm"
         />
       </div>
+      
       <div ref={contentRef} className="flex flex-col gap-4">
         <img
           src="./assets/Intro.jpg"
