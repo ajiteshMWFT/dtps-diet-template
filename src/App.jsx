@@ -53,7 +53,9 @@ function App() {
   return (
     <div className="mx-auto bg-[url('https://iili.io/Hiyht1f.jpg')] bg-fixed bg-no-repeat bg-cover">
       <div className="mx-auto mb-4 flex justify-center items-center font-bold bg-rose-300 p-2">
-        <label htmlFor="day-num " className="text-white">Number of Days</label>
+        <label htmlFor="day-num " className="text-white">
+          Number of Days
+        </label>
         <input
           type="number"
           id="day-num"
@@ -78,10 +80,6 @@ function App() {
         ))}
         <Notes />
 
-        <img
-          src="./assets/Cycle/01.jpg"
-          className="w-full max-w-[540px] h-full mx-auto"
-        />
         <img
           src="./assets/Cycle/02.jpg"
           className="w-full max-w-[540px] h-full mx-auto"
@@ -121,7 +119,14 @@ function App() {
         onClick={() => convertToPDF()}
         disabled={Loading}
       >
-        {Loading ? "Creating" : (<p className="flex justify-center items-center gap-1"> <DownloadIcon className="w-2"/> Download PDF</p>)}
+        {Loading ? (
+          "Creating"
+        ) : (
+          <p className="flex justify-center items-center gap-1">
+            {" "}
+            <DownloadIcon className="w-2" /> Download PDF
+          </p>
+        )}
       </button>
     </div>
   );
