@@ -12,7 +12,7 @@ const Day = ({ i }) => {
                 <p className=" ">Early Morning</p>
                 <p className="text-red-600">8:30AM</p>
               </td>
-              <td contentEditable suppressContentEditableWarning={true} className="w-1/2">
+              <td contentEditable suppressContentEditableWarning={true} className="min-w-1/2">
                 samosa
               </td>
             </tr>
@@ -22,7 +22,7 @@ const Day = ({ i }) => {
                 <p className=" ">Break Fast</p>
                 <p className="text-red-600">10:00AM</p>
               </td>
-              <td contentEditable suppressContentEditableWarning={true} className="w-1/2">
+              <td contentEditable suppressContentEditableWarning={true} className="min-w-1/2">
                 
               </td>
             </tr>
@@ -32,7 +32,7 @@ const Day = ({ i }) => {
                 <p className=" ">Mid Morning</p>
                 <p className="text-red-600">11:00AM</p>
               </td>
-              <td contentEditable suppressContentEditableWarning={true} className="w-1/2">
+              <td contentEditable suppressContentEditableWarning={true} className="min-w-1/2">
                 
               </td>
             </tr>
@@ -42,7 +42,7 @@ const Day = ({ i }) => {
                 <p className=" ">Lunch</p>
                 <p className="text-red-600">01:30PM</p>
               </td>
-              <td contentEditable suppressContentEditableWarning={true} className="w-1/2">
+              <td contentEditable suppressContentEditableWarning={true} className="min-w-1/2">
                 
               </td>
             </tr>
@@ -52,7 +52,7 @@ const Day = ({ i }) => {
                 <p className=" ">After Lunch</p>
                 <p className="text-red-600">2:00PM</p>
               </td>
-              <td contentEditable suppressContentEditableWarning={true} className="w-1/2">
+              <td contentEditable suppressContentEditableWarning={true} className="min-w-1/2">
                 
               </td>
             </tr>
@@ -62,7 +62,7 @@ const Day = ({ i }) => {
                 <p className=" ">Evening Snack</p>
                 <p className="text-red-600">05:30PM</p>
               </td>
-              <td contentEditable suppressContentEditableWarning={true} className="w-1/2">
+              <td contentEditable suppressContentEditableWarning={true} className="min-w-1/2">
                 
               </td>
             </tr>
@@ -72,7 +72,7 @@ const Day = ({ i }) => {
                 <p className=" ">Dinner</p>
                 <p className="text-red-600">8:30PM</p>
               </td>
-              <td contentEditable suppressContentEditableWarning={true} className="w-1/2">
+              <td contentEditable suppressContentEditableWarning={true} className="min-w-1/2">
                 
               </td>
             </tr>
@@ -82,7 +82,7 @@ const Day = ({ i }) => {
                 <p className=" ">Bed Time</p>
                 <p className="text-red-600">10:00PM</p>
               </td>
-              <td contentEditable suppressContentEditableWarning={true} className="w-1/2">
+              <td contentEditable suppressContentEditableWarning={true} className="min-w-1/2">
                 
               </td>
             </tr>
